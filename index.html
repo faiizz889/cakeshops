@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Cake Boutique | Baked with Love, Paldi, Ahmedabad</title>
+  <meta name="description" content="Custom cakes, pastries and cupcakes baked fresh every day in Paldi, Ahmedabad. Order on WhatsApp.">
+  <meta name="theme-color" content="#2a2a2a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Cake Boutique | Baked with Love">
+  <meta property="og:description" content="Custom cakes and pastries baked fresh daily in Paldi, Ahmedabad.">
+  <meta property="og:image" content="assets/images/og-cover.jpg">
+  <link rel="icon" href="assets/images/logo.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SVG sprite + refraction filter (shared on every page) -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="glass-refract" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="4" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+      <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/><path d="M9 9.5c.3 2 2.5 4.2 5 5l1.3-1.3-2-1-.9.8c-.8-.4-1.6-1.2-2-2l.8-.9-1-2L9 9.5z"/></symbol>
+      <symbol id="i-cake" viewBox="0 0 24 24"><path d="M4 20h16M5 20v-7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7M12 11V7M12 4.5c.8.8 1 1.5 0 2.5-1-1-.8-1.7 0-2.5zM5 15c2 1.5 3.5 1.5 5 0s3-1.5 4 0 3 1.5 5 0"/></symbol>
+      <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1-4L16.5 4.5a2 2 0 0 1 3 3L8 19l-4 1zM14 7l3 3"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19C5 10 10 5 20 4c0 10-5 15-14 15M5 19l8-8"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7M7 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM17 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container">
+      <div class="header__bar glass glass--refract">
+        <a class="header__logo" href="index.html" aria-label="The Cake Boutique, home">
+          <!-- TODO: save your logo as assets/images/logo.png -->
+          <img src="assets/images/logo.jpg" alt="" width="44" height="44">
+          <span>The Cake Boutique</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <ul class="nav__list">
+            <li><a class="nav__link link-underline" href="index.html" aria-current="page">Home</a></li>
+            <li><a class="nav__link link-underline" href="menu.html">Menu</a></li>
+            <li><a class="nav__link link-underline" href="custom-cakes.html">Custom Cakes</a></li>
+            <li><a class="nav__link link-underline" href="gallery.html">Gallery</a></li>
+            <li><a class="nav__link link-underline" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet">
+          <svg class="icon i-menu"><use href="#i-menu"/></svg>
+          <svg class="icon i-close"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile glass sheet -->
+  <div class="sheet" id="sheet" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a class="sheet__link" href="index.html">Home</a>
+      <a class="sheet__link" href="menu.html">Menu</a>
+      <a class="sheet__link" href="custom-cakes.html">Custom Cakes</a>
+      <a class="sheet__link" href="gallery.html">Gallery</a>
+      <a class="sheet__link" href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <!-- TODO: replace with the client's own hero photo -->
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1920&q=80"
+             alt="A dark chocolate cake with glossy ganache on a marble counter" width="1920" height="1280" fetchpriority="high">
+      </div>
+
+      <svg class="hero__badge" viewBox="0 0 200 200" role="img" aria-label="The Cake Boutique. Baked with love.">
+        <defs><path id="ring" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+        <g class="hero__badge-ring">
+          <text fill="#fff" font-size="14" font-family="DM Sans, sans-serif" letter-spacing="3">
+            <textPath href="#ring" textLength="495" lengthAdjust="spacing">THE CAKE BOUTIQUE · BAKED WITH LOVE · </textPath>
+          </text>
+        </g>
+        <circle cx="100" cy="100" r="52" fill="none" stroke="#fff" stroke-opacity=".6"/>
+        <text x="100" y="109" text-anchor="middle" fill="#fff" font-size="28" font-family="Fraunces, serif">TCB</text>
+      </svg>
+
+      <div class="container hero__inner">
+        <div>
+          <span class="eyebrow hero__eyebrow">Paldi, Ahmedabad</span>
+          <h1 class="hero__title" id="hero-title">Baked with love, finished by hand.</h1>
+          <p class="hero__text">Soft sponges, real chocolate, and cakes that look as good as they taste. Made fresh every morning.</p>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="menu.html">Explore Cakes
+              <svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a class="btn glass" href="https://wa.me/910000000000?text=Hi%20The%20Cake%20Boutique%2C%20I%27d%20like%20to%20order%20a%20cake." target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-chat"/></svg>Order on WhatsApp</a>
+          </div>
+        </div>
+        <aside class="hero__note glass" aria-label="Today at TCB">
+          <strong>Baked fresh daily.</strong><br>
+          Order before 4 pm for same-day delivery across Ahmedabad.
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED ================= -->
+    <section class="section drip-host" aria-labelledby="featured-title">
+  <div class="drip reveal" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+  <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Our favourites</span>
+          <h2 id="featured-title">The cakes people come back for.</h2>
+          <p>Swipe through a few of the signatures from our counter.</p>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="rail" data-stagger>
+          <!-- TODO: swap Unsplash photos for the client's real cake photos -->
+          <li class="card reveal">
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=640&q=75" alt="Belgian Dark Truffle cake" width="640" height="800" loading="lazy">
+              <span class="card__tag glass">Birthday</span>
+            </div>
+            <h3 class="card__title">Belgian Dark Truffle</h3>
+            <p class="card__price">Starts from ₹850 / 0.5 kg</p>
+          </li>
+          <li class="card reveal">
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=640&q=75" alt="Rose Pistachio cake topped with petals" width="640" height="800" loading="lazy">
+              <span class="card__tag glass">Wedding</span>
+            </div>
+            <h3 class="card__title">Rose Pistachio</h3>
+            <p class="card__price">Starts from ₹1,100 / 0.5 kg</p>
+          </li>
+          <li class="card reveal">
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=640&q=75" alt="Biscoff Crunch cake with caramel drip" width="640" height="800" loading="lazy">
+              <span class="card__tag glass">Anniversary</span>
+            </div>
+            <h3 class="card__title">Biscoff Crunch</h3>
+            <p class="card__price">Starts from ₹950 / 0.5 kg</p>
+          </li>
+          <li class="card reveal">
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&w=640&q=75" alt="Box of six frosted cupcakes" width="640" height="800" loading="lazy">
+              <span class="card__tag glass">Cupcakes</span>
+            </div>
+            <h3 class="card__title">Velvet Cupcake Box</h3>
+            <p class="card__price">Box of 6 from ₹540</p>
+          </li>
+          <li class="card reveal">
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=640&q=75" alt="Eggless mango cream cake" width="640" height="800" loading="lazy">
+              <span class="card__tag glass">Eggless</span>
+            </div>
+            <h3 class="card__title">Alphonso Mango Cream</h3>
+            <p class="card__price">Starts from ₹900 / 0.5 kg</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= WHY TCB ================= -->
+    <section class="section section--dark scallop-top" aria-labelledby="why-title">
+      <div class="container why">
+        <div class="why__intro reveal">
+          <span class="eyebrow">Why TCB</span>
+          <h2 id="why-title">Small bakery. Big attention to detail.</h2>
+          <p>We bake in small batches so every cake leaves the kitchen the way we'd want to receive it.</p>
+        </div>
+        <ol class="why__list" data-stagger>
+          <li class="why__item reveal">
+            <svg class="icon"><use href="#i-leaf"/></svg>
+            <div><h3>Fresh every morning</h3><p>Nothing sits in a fridge for days. Your cake is baked the day you collect it.</p></div>
+          </li>
+          <li class="why__item reveal">
+            <svg class="icon"><use href="#i-pen"/></svg>
+            <div><h3>Designed around you</h3><p>Colours, flavours, a message in your handwriting. Tell us the occasion and we sketch it.</p></div>
+          </li>
+          <li class="why__item reveal">
+            <svg class="icon"><use href="#i-cake"/></svg>
+            <div><h3>Ingredients we trust</h3><p>Belgian chocolate, real butter, fresh cream and fruit in season. No shortcuts.</p></div>
+          </li>
+          <li class="why__item reveal">
+            <svg class="icon"><use href="#i-truck"/></svg>
+            <div><h3>Same-day in Ahmedabad</h3><p>Order before 4 pm and we deliver it safely boxed, right on time.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <figure class="about__media reveal">
+          <!-- TODO: replace with a photo of the shop or the baker -->
+          <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=75" alt="A baker piping icing onto a cake" width="900" height="1100" loading="lazy">
+        </figure>
+        <div class="about__text reveal">
+          <span class="eyebrow">Our story</span>
+          <h2 id="about-title">A little shop in Paldi with a very big oven.</h2>
+          <p>The Cake Boutique started with one idea: a celebration cake should taste as thoughtful as it looks. So we keep the menu tight, the recipes honest, and the finishing touches by hand.</p>
+          <p>Birthdays, weddings, a Tuesday that deserves dessert. Whatever the reason, we bake it with love.</p>
+          <a class="btn btn--dark" href="custom-cakes.html">Design your cake
+            <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+    <!-- ================= CAKE STUDIO ================= -->
+<section class="section builder" data-builder aria-labelledby="builder-title">
+  <div class="blobs" aria-hidden="true"><span></span><span></span></div>
+  <div class="container builder__grid">
+
+    <div class="builder__stage glass reveal">
+      <svg class="cake" viewBox="0 0 240 260" role="img" aria-label="A three-tier cake that changes with your choices">
+        <ellipse cx="120" cy="240" rx="104" ry="10" fill="rgba(0,0,0,0.25)"/>
+
+        <!-- bottom tier -->
+        <rect class="cake__layer" x="40" y="170" width="160" height="60" rx="14"/>
+        <g class="cake__icing">
+          <rect x="40" y="170" width="160" height="16" rx="8"/>
+          <rect x="56" y="178" width="12" height="28" rx="6"/>
+          <rect x="104" y="178" width="12" height="20" rx="6"/>
+          <rect x="160" y="178" width="12" height="32" rx="6"/>
+        </g>
+        <text class="cake__text" x="120" y="217" data-builder-text></text>
+
+        <!-- middle tier -->
+        <rect class="cake__layer" x="52" y="115" width="136" height="60" rx="14"/>
+        <g class="cake__icing">
+          <rect x="52" y="115" width="136" height="16" rx="8"/>
+          <rect x="66" y="123" width="12" height="24" rx="6"/>
+          <rect x="112" y="123" width="12" height="18" rx="6"/>
+          <rect x="160" y="123" width="12" height="26" rx="6"/>
+        </g>
+
+        <!-- top tier -->
+        <rect class="cake__layer" x="66" y="64" width="108" height="56" rx="14"/>
+        <g class="cake__icing">
+          <rect x="66" y="64" width="108" height="16" rx="8"/>
+          <rect x="80" y="72" width="12" height="22" rx="6"/>
+          <rect x="124" y="72" width="12" height="16" rx="6"/>
+          <rect x="148" y="72" width="12" height="24" rx="6"/>
+        </g>
+
+        <!-- candle -->
+        <rect class="cake__candle" x="118" y="40" width="4" height="24" rx="2"/>
+        <ellipse class="cake__flame" cx="120" cy="33" rx="5" ry="8"/>
+      </svg>
+    </div>
+
+    <div class="builder__controls reveal">
+      <span class="eyebrow">Cake studio</span>
+      <h2 id="builder-title">Design it. See it. Order it.</h2>
+      <p>Pick a flavour and write your message. We'll turn it into a real cake.</p>
+
+      <fieldset class="builder__set">
+        <legend>Pick a flavour</legend>
+        <div class="swatches">
+          <button class="swatch" type="button" data-flavour="Belgian Dark Truffle" data-sponge="#5a3a2a" data-icing="#2e1a12" data-ink="#f6efe6" aria-pressed="true"><span class="swatch__dot"></span>Dark Truffle</button>
+          <button class="swatch" type="button" data-flavour="Rose Pistachio" data-sponge="#f2d6d0" data-icing="#a9c48a" data-ink="#2a2a2a" aria-pressed="false"><span class="swatch__dot"></span>Rose Pistachio</button>
+          <button class="swatch" type="button" data-flavour="Biscoff Crunch" data-sponge="#c9a27a" data-icing="#8a5a35" data-ink="#2a2a2a" aria-pressed="false"><span class="swatch__dot"></span>Biscoff</button>
+          <button class="swatch" type="button" data-flavour="Red Velvet" data-sponge="#a3262e" data-icing="#f6efe6" data-ink="#f6efe6" aria-pressed="false"><span class="swatch__dot"></span>Red Velvet</button>
+          <button class="swatch" type="button" data-flavour="Alphonso Mango (eggless)" data-sponge="#f4c55c" data-icing="#fff1c9" data-ink="#2a2a2a" aria-pressed="false"><span class="swatch__dot"></span>Mango</button>
+        </div>
+      </fieldset>
+
+      <div class="field builder__msg">
+        <label for="b-msg">Message on the cake <span class="field__hint">(up to 18 characters)</span></label>
+        <input id="b-msg" type="text" maxlength="18" placeholder="Happy Birthday" data-builder-msg>
+      </div>
+
+      <p class="builder__summary" aria-live="polite">Your pick: <strong data-builder-label></strong></p>
+
+      <a class="btn btn--solid" data-builder-order href="https://wa.me/910000000000" target="_blank" rel="noopener">
+        <svg class="icon"><use href="#i-chat"/></svg>Order this cake</a>
+    </div>
+  </div>
+</section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="section testimonials" aria-labelledby="love-title">
+      <div class="container">
+        <div class="testimonials__head">
+          <h2 id="love-title">Kind words, sweet moments.</h2>
+          <div class="testimonials__nav">
+            <button class="round-btn" type="button" data-carousel-prev aria-label="Previous review"><svg class="icon"><use href="#i-left"/></svg></button>
+            <button class="round-btn" type="button" data-carousel-next aria-label="Next review"><svg class="icon"><use href="#i-right"/></svg></button>
+          </div>
+        </div>
+        <!-- TODO: replace with real client reviews -->
+        <ul class="testimonials__track" data-carousel tabindex="0" aria-label="Customer reviews">
+          <li class="quote">
+            <p>"The Belgian Dark Truffle was the first thing to disappear at my daughter's birthday. Moist, rich, not too sweet."</p>
+            <footer>Riddhi S., Navrangpura</footer>
+          </li>
+          <li class="quote">
+            <p>"They matched our wedding colours perfectly. Guests kept asking where the cake was from."</p>
+            <footer>Karan &amp; Meera, Satellite</footer>
+          </li>
+          <li class="quote">
+            <p>"Ordered on WhatsApp at noon, delivered by evening, still perfectly chilled. Easy and lovely."</p>
+            <footer>Hiral P., Vastrapur</footer>
+          </li>
+          <li class="quote">
+            <p>"The eggless mango cake tastes like summer. Finally a bakery that gets eggless right."</p>
+            <footer>Jignesh D., Paldi</footer>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= INSTAGRAM GRID ================= -->
+    <section class="section insta" aria-labelledby="insta-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">On the counter</span>
+          <h2 id="insta-title">Fresh from the kitchen.</h2>
+        </div>
+        <!-- TODO: replace with the shop's real Instagram photos -->
+        <ul class="insta__grid" data-stagger>
+          <li class="reveal"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=500&q=70" alt="Macarons and pastries" width="500" height="500" loading="lazy"></li>
+          <li class="reveal"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=70" alt="Slice of layered cake" width="500" height="500" loading="lazy"></li>
+          <li class="reveal"><img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=500&q=70" alt="Decorated birthday cake" width="500" height="500" loading="lazy"></li>
+          <li class="reveal"><img src="https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=500&q=70" alt="Cupcakes with swirled frosting" width="500" height="500" loading="lazy"></li>
+          <li class="reveal"><img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=500&q=70" alt="Strawberry tart" width="500" height="500" loading="lazy"></li>
+          <li class="reveal"><img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=500&q=70" alt="Chocolate dessert with berries" width="500" height="500" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    
+    <div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Baked fresh daily</span><span>Custom cakes</span><span>Same-day delivery</span><span>Eggless options</span><span>Baked with love</span>
+    <span>Baked fresh daily</span><span>Custom cakes</span><span>Same-day delivery</span><span>Eggless options</span><span>Baked with love</span>
+  </div>
+</div>
+
+    <!-- ================= CTA BAND ================= -->
+    <section class="cta" aria-labelledby="cta-title">
+      <img class="cta__bg" src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=1920&q=70" alt="" width="1920" height="1080" loading="lazy">
+      <div class="container">
+        <div class="cta__panel glass reveal">
+          <h2 id="cta-title">Planning something sweet?</h2>
+          <p>Tell us the date and the vibe. We'll take it from there.</p>
+          <a class="btn btn--solid" href="https://wa.me/910000000000?text=Hi%20The%20Cake%20Boutique%2C%20I%27d%20like%20to%20plan%20a%20cake." target="_blank" rel="noopener">
+            <svg class="icon"><use href="#i-chat"/></svg>Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">The Cake Boutique</p>
+          <p>Baked with love in Paldi, Ahmedabad.</p>
+          <address>
+            Bus Stand, 106, Giri Bhavan, Nr. Ajay Restaurant,<br>
+            Anand Nagar Road, Bhatta, Paldi,<br>
+            Ahmedabad, Gujarat 380007
+          </address>
+        </div>
+        <div>
+          <h2 class="footer__title">Explore</h2>
+          <ul class="footer__list">
+            <li><a class="link-underline" href="index.html">Home</a></li>
+            <li><a class="link-underline" href="menu.html">Menu</a></li>
+            <li><a class="link-underline" href="custom-cakes.html">Custom Cakes</a></li>
+            <li><a class="link-underline" href="gallery.html">Gallery</a></li>
+            <li><a class="link-underline" href="index.html#about">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__title">Say hello</h2>
+          <ul class="footer__list">
+            <!-- TODO: replace placeholder phone and WhatsApp numbers -->
+            <li><a class="link-underline" href="tel:+910000000000">+91 00000 00000</a></li>
+            <li><a class="link-underline" href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp us</a></li>
+            <li><a class="link-underline" href="contact.html">Find the shop</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__bottom">© <span data-year>2026</span> The Cake Boutique. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-fab glass" href="https://wa.me/910000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg class="icon"><use href="#i-chat"/></svg>
+  </a>
+</body>
+</html>

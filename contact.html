@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | The Cake Boutique, Paldi, Ahmedabad</title>
+  <meta name="description" content="Visit The Cake Boutique in Paldi, Ahmedabad. Find our address, opening hours, phone and WhatsApp, or send us an enquiry.">
+  <meta name="theme-color" content="#2a2a2a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | The Cake Boutique">
+  <meta property="og:description" content="Find the shop in Paldi, Ahmedabad, or message us on WhatsApp.">
+  <meta property="og:image" content="assets/images/og-cover.jpg">
+  <link rel="icon" href="assets/images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SVG sprite + refraction filter (shared on every page) -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="glass-refract" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="4" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/><path d="M9 9.5c.3 2 2.5 4.2 5 5l1.3-1.3-2-1-.9.8c-.8-.4-1.6-1.2-2-2l.8-.9-1-2L9 9.5z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A15 15 0 0 1 4 5a1 1 0 0 1 1-1z"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container">
+      <div class="header__bar glass glass--refract">
+        <a class="header__logo" href="index.html" aria-label="The Cake Boutique, home">
+          <img src="assets/images/logo.png" alt="" width="44" height="44">
+          <span>The Cake Boutique</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <ul class="nav__list">
+            <li><a class="nav__link link-underline" href="index.html">Home</a></li>
+            <li><a class="nav__link link-underline" href="menu.html">Menu</a></li>
+            <li><a class="nav__link link-underline" href="custom-cakes.html">Custom Cakes</a></li>
+            <li><a class="nav__link link-underline" href="gallery.html">Gallery</a></li>
+            <li><a class="nav__link link-underline" href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet">
+          <svg class="icon i-menu"><use href="#i-menu"/></svg>
+          <svg class="icon i-close"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="sheet" id="sheet" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a class="sheet__link" href="index.html">Home</a>
+      <a class="sheet__link" href="menu.html">Menu</a>
+      <a class="sheet__link" href="custom-cakes.html">Custom Cakes</a>
+      <a class="sheet__link" href="gallery.html">Gallery</a>
+      <a class="sheet__link" href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="page-hero" aria-labelledby="contact-title">
+      <div class="page-hero__bg">
+        <!-- TODO: replace with a photo of the shop front -->
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1920&q=75"
+             alt="" width="1920" height="1280" fetchpriority="high">
+      </div>
+      <div class="container">
+        <span class="eyebrow page-hero__eyebrow">Contact</span>
+        <h1 class="page-hero__title" id="contact-title">Come say hello. We'll put the kettle on.</h1>
+        <p class="page-hero__text">Visit the shop in Paldi, call us, or message us on WhatsApp.</p>
+      </div>
+    </section>
+
+    <!-- ================= INFO + MAP ================= -->
+    <section class="section contact" aria-labelledby="visit-title">
+      <div class="blobs" aria-hidden="true"><span></span><span></span></div>
+      <div class="container contact__grid">
+
+        <div class="contact__info">
+          <h2 id="visit-title" class="reveal">Visit the shop</h2>
+          <ul class="contact__cards" data-stagger>
+            <li class="info-card glass reveal">
+              <svg class="icon"><use href="#i-pin"/></svg>
+              <div>
+                <h3>Address</h3>
+                <address>
+                  Bus Stand, 106, Giri Bhavan, Nr. Ajay Restaurant,<br>
+                  Anand Nagar Road, Bhatta, Paldi,<br>
+                  Ahmedabad, Gujarat 380007
+                </address>
+              </div>
+            </li>
+            <li class="info-card glass reveal">
+              <svg class="icon"><use href="#i-clock"/></svg>
+              <div>
+                <h3>Opening hours</h3>
+                <!-- TODO: replace with the shop's real hours -->
+                <p>Monday to Sunday<br>10:00 am to 10:00 pm</p>
+              </div>
+            </li>
+            <li class="info-card glass reveal">
+              <svg class="icon"><use href="#i-phone"/></svg>
+              <div>
+                <h3>Phone</h3>
+                <!-- TODO: replace placeholder number -->
+                <p><a class="link-underline" href="tel:+910000000000">+91 00000 00000</a></p>
+              </div>
+            </li>
+            <li class="info-card glass reveal">
+              <svg class="icon"><use href="#i-chat"/></svg>
+              <div>
+                <h3>WhatsApp</h3>
+                <p><a class="link-underline" href="https://wa.me/910000000000" target="_blank" rel="noopener">Chat with us</a></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact__map reveal">
+          <!-- TODO: if the client wants an exact pin, replace the src with the
+               "Embed a map" link from Google Maps (Share > Embed a map). -->
+          <iframe
+            title="Map showing The Cake Boutique in Paldi, Ahmedabad"
+            src="https://www.google.com/maps?q=The+Cake+Boutique,+Giri+Bhavan,+Anand+Nagar+Road,+Bhatta,+Paldi,+Ahmedabad+380007&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <a class="btn btn--solid contact__directions"
+             href="https://www.google.com/maps/dir/?api=1&destination=The+Cake+Boutique,+Giri+Bhavan,+Anand+Nagar+Road,+Bhatta,+Paldi,+Ahmedabad+380007"
+             target="_blank" rel="noopener">
+            <svg class="icon"><use href="#i-pin"/></svg>Get Directions</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ENQUIRY FORM ================= -->
+    <section class="section enquiry" aria-labelledby="enquiry-title">
+      <div class="container enquiry__wrap">
+        <div class="enquiry__intro reveal">
+          <span class="eyebrow">Quick enquiry</span>
+          <h2 id="enquiry-title">Have a question? Ask away.</h2>
+          <p>Prices, flavours, delivery areas, allergies. Write it here and we'll reply on WhatsApp.</p>
+        </div>
+
+        <div class="enquiry__panel reveal">
+          <form class="form form--light" data-contact-form novalidate>
+            <div class="form__grid">
+              <div class="field">
+                <label for="c-name">Your name</label>
+                <input id="c-name" name="name" type="text" autocomplete="name" required aria-describedby="c-name-error">
+                <p class="field__error" id="c-name-error" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="c-phone">Phone number</label>
+                <input id="c-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile number" required aria-describedby="c-phone-error">
+                <p class="field__error" id="c-phone-error" role="alert"></p>
+              </div>
+              <div class="field field--full">
+                <label for="c-message">Your message</label>
+                <textarea id="c-message" name="message" rows="5" required aria-describedby="c-message-error"></textarea>
+                <p class="field__error" id="c-message-error" role="alert"></p>
+              </div>
+            </div>
+            <button class="btn btn--dark form__submit" type="submit">Prepare my message
+              <svg class="icon"><use href="#i-arrow"/></svg></button>
+          </form>
+
+          <div class="success success--light" data-contact-success hidden tabindex="-1">
+            <span class="success__icon"><svg class="icon"><use href="#i-check"/></svg></span>
+            <h3>Thank you, <span data-contact-name></span>.</h3>
+            <p>Your message is ready. Tap the button to send it on WhatsApp.</p>
+            <a class="btn btn--dark" data-contact-link href="https://wa.me/910000000000" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-chat"/></svg>Send on WhatsApp</a>
+            <button class="success__again" type="button" data-contact-reset>Edit my message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">The Cake Boutique</p>
+          <p>Baked with love in Paldi, Ahmedabad.</p>
+          <address>
+            Bus Stand, 106, Giri Bhavan, Nr. Ajay Restaurant,<br>
+            Anand Nagar Road, Bhatta, Paldi,<br>
+            Ahmedabad, Gujarat 380007
+          </address>
+        </div>
+        <div>
+          <h2 class="footer__title">Explore</h2>
+          <ul class="footer__list">
+            <li><a class="link-underline" href="index.html">Home</a></li>
+            <li><a class="link-underline" href="menu.html">Menu</a></li>
+            <li><a class="link-underline" href="custom-cakes.html">Custom Cakes</a></li>
+            <li><a class="link-underline" href="gallery.html">Gallery</a></li>
+            <li><a class="link-underline" href="index.html#about">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__title">Say hello</h2>
+          <ul class="footer__list">
+            <li><a class="link-underline" href="tel:+910000000000">+91 00000 00000</a></li>
+            <li><a class="link-underline" href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp us</a></li>
+            <li><a class="link-underline" href="contact.html">Find the shop</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__bottom">© <span data-year>2026</span> The Cake Boutique. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-fab glass" href="https://wa.me/910000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg class="icon"><use href="#i-chat"/></svg>
+  </a>
+</body>
+</html>

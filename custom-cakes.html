@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom Cakes | The Cake Boutique, Paldi, Ahmedabad</title>
+  <meta name="description" content="Design your own cake with The Cake Boutique. Choose the flavour, size and message, and send your order on WhatsApp.">
+  <meta name="theme-color" content="#2a2a2a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Custom Cakes | The Cake Boutique">
+  <meta property="og:description" content="Tell us the occasion and we'll design the cake.">
+  <meta property="og:image" content="assets/images/og-cover.jpg">
+  <link rel="icon" href="assets/images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SVG sprite + refraction filter (shared on every page) -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="glass-refract" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="4" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+      <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/><path d="M9 9.5c.3 2 2.5 4.2 5 5l1.3-1.3-2-1-.9.8c-.8-.4-1.6-1.2-2-2l.8-.9-1-2L9 9.5z"/></symbol>
+      <symbol id="i-cake" viewBox="0 0 24 24"><path d="M4 20h16M5 20v-7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7M12 11V7M12 4.5c.8.8 1 1.5 0 2.5-1-1-.8-1.7 0-2.5zM5 15c2 1.5 3.5 1.5 5 0s3-1.5 4 0 3 1.5 5 0"/></symbol>
+      <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1-4L16.5 4.5a2 2 0 0 1 3 3L8 19l-4 1zM14 7l3 3"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19C5 10 10 5 20 4c0 10-5 15-14 15M5 19l8-8"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7M7 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM17 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container">
+      <div class="header__bar glass glass--refract">
+        <a class="header__logo" href="index.html" aria-label="The Cake Boutique, home">
+          <img src="assets/images/logo.p
+          
+          ng" alt="" width="44" height="44">
+          <span>The Cake Boutique</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <ul class="nav__list">
+            <li><a class="nav__link link-underline" href="index.html">Home</a></li>
+            <li><a class="nav__link link-underline" href="menu.html">Menu</a></li>
+            <li><a class="nav__link link-underline" href="custom-cakes.html" aria-current="page">Custom Cakes</a></li>
+            <li><a class="nav__link link-underline" href="gallery.html">Gallery</a></li>
+            <li><a class="nav__link link-underline" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet">
+          <svg class="icon i-menu"><use href="#i-menu"/></svg>
+          <svg class="icon i-close"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="sheet" id="sheet" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a class="sheet__link" href="index.html">Home</a>
+      <a class="sheet__link" href="menu.html">Menu</a>
+      <a class="sheet__link" href="custom-cakes.html">Custom Cakes</a>
+      <a class="sheet__link" href="gallery.html">Gallery</a>
+      <a class="sheet__link" href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="page-hero" aria-labelledby="custom-title">
+      <div class="page-hero__bg">
+        <!-- TODO: replace with the client's own photo -->
+        <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=1920&q=75"
+             alt="" width="1920" height="1080" fetchpriority="high">
+      </div>
+      <div class="container">
+        <span class="eyebrow page-hero__eyebrow">Custom cakes</span>
+        <h1 class="page-hero__title" id="custom-title">Your idea, our oven.</h1>
+        <p class="page-hero__text">Tell us the occasion, the flavour and the feeling. We'll sketch it, bake it and finish it by hand.</p>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section" aria-labelledby="steps-title">
+      <div class="container steps">
+        <div class="section-head reveal">
+          <span class="eyebrow">How ordering works</span>
+          <h2 id="steps-title">Four steps from idea to cake.</h2>
+          <p>Please order at least 48 hours ahead. Tiered and sculpted cakes need 5 days.</p>
+        </div>
+        <ol class="timeline" data-stagger>
+          <li class="timeline__item reveal">
+            <span class="timeline__num">01</span>
+            <div><h3>Share your idea</h3><p>Fill in the form below, or send us a reference photo on WhatsApp.</p></div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__num">02</span>
+            <div><h3>We confirm the details</h3><p>We reply within a few hours with a design sketch and a final quote.</p></div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__num">03</span>
+            <div><h3>Pay the advance</h3><p>A 50% advance locks your date. The balance is due on delivery or pickup.</p></div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__num">04</span>
+            <div><h3>Baked fresh, delivered safe</h3><p>Baked the morning of your event, boxed carefully and delivered across Ahmedabad.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= ORDER FORM ================= -->
+    <section class="section order" id="order" aria-labelledby="order-title">
+      <div class="blobs" aria-hidden="true"><span></span><span></span></div>
+      <div class="container order__wrap">
+        <div class="order__intro reveal">
+          <span class="eyebrow">Start your order</span>
+          <h2 id="order-title">Tell us about your cake.</h2>
+          <p>This form builds a ready-to-send WhatsApp message. Nothing is charged and nothing is final until we confirm with you.</p>
+        </div>
+
+        <div class="order__panel glass reveal">
+          <form class="form" data-order-form novalidate>
+            <div class="form__grid">
+              <div class="field">
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+                <p class="field__error" id="name-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile number" required aria-describedby="phone-error">
+                <p class="field__error" id="phone-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label for="occasion">Occasion</label>
+                <select id="occasion" name="occasion" required aria-describedby="occasion-error">
+                  <option value="">Choose one</option>
+                  <option>Birthday</option>
+                  <option>Wedding</option>
+                  <option>Anniversary</option>
+                  <option>Baby shower</option>
+                  <option>Corporate</option>
+                  <option>Just because</option>
+                </select>
+                <p class="field__error" id="occasion-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label for="flavour">Flavour</label>
+                <select id="flavour" name="flavour" required aria-describedby="flavour-error">
+                  <option value="">Choose one</option>
+                  <option>Belgian Dark Truffle</option>
+                  <option>Rose Pistachio</option>
+                  <option>Biscoff Crunch</option>
+                  <option>Alphonso Mango (eggless)</option>
+                  <option>Red Velvet</option>
+                  <option>Vanilla Bean</option>
+                  <option>Not sure, suggest one</option>
+                </select>
+                <p class="field__error" id="flavour-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label for="weight">Weight</label>
+                <select id="weight" name="weight" required aria-describedby="weight-error">
+                  <option value="">Choose one</option>
+                  <option>0.5 kg</option>
+                  <option>1 kg</option>
+                  <option>2 kg</option>
+                  <option>3 kg or more</option>
+                </select>
+                <p class="field__error" id="weight-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label for="date">Date needed</label>
+                <input id="date" name="date" type="date" required aria-describedby="date-error">
+                <p class="field__error" id="date-error" role="alert"></p>
+              </div>
+
+              <div class="field field--full">
+                <label for="message">Message on the cake <span class="field__hint">(optional)</span></label>
+                <input id="message" name="message" type="text" maxlength="40" placeholder="Happy Birthday, Aarav!" aria-describedby="message-error">
+                <p class="field__error" id="message-error" role="alert"></p>
+              </div>
+
+              <div class="field field--full">
+                <label for="reference">Reference photo <span class="field__hint">(optional)</span></label>
+                <input id="reference" name="reference" type="file" accept="image/*" aria-describedby="reference-error reference-help">
+                <p class="field__hint" id="reference-help">WhatsApp links can't carry attachments. We'll ask you to send this photo in the chat.</p>
+                <p class="field__error" id="reference-error" role="alert"></p>
+              </div>
+            </div>
+
+            <button class="btn btn--solid form__submit" type="submit">Build my WhatsApp message
+              <svg class="icon"><use href="#i-arrow"/></svg></button>
+          </form>
+
+          <!-- Success state (hidden until the form validates) -->
+          <div class="success" data-success hidden tabindex="-1">
+            <span class="success__icon"><svg class="icon"><use href="#i-check"/></svg></span>
+            <h3>Thank you, <span data-success-name></span>.</h3>
+            <p>Your message is ready. Tap the button to send it to us on WhatsApp.</p>
+            <a class="btn btn--solid" data-success-link href="https://wa.me/910000000000" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-chat"/></svg>Send on WhatsApp</a>
+            <button class="success__again" type="button" data-reset>Edit my order</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FLAVOUR + SIZE GUIDE ================= -->
+    <section class="section guide" aria-labelledby="guide-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Guide</span>
+          <h2 id="guide-title">Flavours and sizes, simply explained.</h2>
+        </div>
+        <div class="guide__grid">
+          <div class="reveal">
+            <h3>Flavours</h3>
+            <dl class="flavours">
+              <div><dt>Belgian Dark Truffle</dt><dd>Deep, rich and bittersweet. Our most requested.</dd></div>
+              <div><dt>Rose Pistachio</dt><dd>Floral, nutty and light. A wedding favourite.</dd></div>
+              <div><dt>Biscoff Crunch</dt><dd>Caramelised spice with a crunchy top.</dd></div>
+              <div><dt>Alphonso Mango</dt><dd>Fresh and fruity. Eggless, in season only.</dd></div>
+              <div><dt>Red Velvet</dt><dd>Soft cocoa, tangy cream cheese. Eggless on request.</dd></div>
+            </dl>
+          </div>
+          <div class="reveal">
+            <h3>Sizes</h3>
+            <div class="table-wrap">
+              <table class="sizes-table">
+                <caption class="visually-hidden">Cake sizes and servings</caption>
+                <thead><tr><th scope="col">Weight</th><th scope="col">Serves</th><th scope="col">Best for</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">0.5 kg</th><td>4 to 6</td><td>Small family moment</td></tr>
+                  <tr><th scope="row">1 kg</th><td>8 to 12</td><td>Birthday at home</td></tr>
+                  <tr><th scope="row">2 kg</th><td>16 to 24</td><td>Party or office</td></tr>
+                  <tr><th scope="row">3 kg +</th><td>30 +</td><td>Weddings and events</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="guide__note">Photo cakes, tiered cakes and fondant work are quoted individually.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">The Cake Boutique</p>
+          <p>Baked with love in Paldi, Ahmedabad.</p>
+          <address>
+            Bus Stand, 106, Giri Bhavan, Nr. Ajay Restaurant,<br>
+            Anand Nagar Road, Bhatta, Paldi,<br>
+            Ahmedabad, Gujarat 380007
+          </address>
+        </div>
+        <div>
+          <h2 class="footer__title">Explore</h2>
+          <ul class="footer__list">
+            <li><a class="link-underline" href="index.html">Home</a></li>
+            <li><a class="link-underline" href="menu.html">Menu</a></li>
+            <li><a class="link-underline" href="custom-cakes.html">Custom Cakes</a></li>
+            <li><a class="link-underline" href="gallery.html">Gallery</a></li>
+            <li><a class="link-underline" href="index.html#about">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__title">Say hello</h2>
+          <ul class="footer__list">
+            <li><a class="link-underline" href="tel:+910000000000">+91 00000 00000</a></li>
+            <li><a class="link-underline" href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp us</a></li>
+            <li><a class="link-underline" href="contact.html">Find the shop</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__bottom">© <span data-year>2026</span> The Cake Boutique. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-fab glass" href="https://wa.me/910000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg class="icon"><use href="#i-chat"/></svg>
+  </a>
+</body>
+</html>

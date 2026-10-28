@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | The Cake Boutique, Paldi, Ahmedabad</title>
+  <meta name="description" content="A look at recent cakes, cupcakes and pastries from The Cake Boutique in Paldi, Ahmedabad.">
+  <meta name="theme-color" content="#2a2a2a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gallery | The Cake Boutique">
+  <meta property="og:description" content="Recent cakes and pastries, baked fresh in Paldi, Ahmedabad.">
+  <meta property="og:image" content="assets/images/og-cover.jpg">
+  <link rel="icon" href="assets/images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SVG sprite + refraction filter (shared on every page) -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="glass-refract" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="4" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+      <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/><path d="M9 9.5c.3 2 2.5 4.2 5 5l1.3-1.3-2-1-.9.8c-.8-.4-1.6-1.2-2-2l.8-.9-1-2L9 9.5z"/></symbol>
+      <symbol id="i-cake" viewBox="0 0 24 24"><path d="M4 20h16M5 20v-7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7M12 11V7M12 4.5c.8.8 1 1.5 0 2.5-1-1-.8-1.7 0-2.5zM5 15c2 1.5 3.5 1.5 5 0s3-1.5 4 0 3 1.5 5 0"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container">
+      <div class="header__bar glass glass--refract">
+        <a class="header__logo" href="index.html" aria-label="The Cake Boutique, home">
+          <img src="assets/images/logo.jpg" alt="" width="44" height="44">
+          <span>The Cake Boutique</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <ul class="nav__list">
+            <li><a class="nav__link link-underline" href="index.html">Home</a></li>
+            <li><a class="nav__link link-underline" href="menu.html">Menu</a></li>
+            <li><a class="nav__link link-underline" href="custom-cakes.html">Custom Cakes</a></li>
+            <li><a class="nav__link link-underline" href="gallery.html" aria-current="page">Gallery</a></li>
+            <li><a class="nav__link link-underline" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet">
+          <svg class="icon i-menu"><use href="#i-menu"/></svg>
+          <svg class="icon i-close"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="sheet" id="sheet" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a class="sheet__link" href="index.html">Home</a>
+      <a class="sheet__link" href="menu.html">Menu</a>
+      <a class="sheet__link" href="custom-cakes.html">Custom Cakes</a>
+      <a class="sheet__link" href="gallery.html">Gallery</a>
+      <a class="sheet__link" href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="page-hero" aria-labelledby="gallery-title">
+      <div class="page-hero__bg">
+        <!-- TODO: replace with the client's own photo -->
+        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=1920&q=75"
+             alt="" width="1920" height="1280" fetchpriority="high">
+      </div>
+      <div class="container">
+        <span class="eyebrow page-hero__eyebrow">Gallery</span>
+        <h1 class="page-hero__title" id="gallery-title">Made by hand, one at a time.</h1>
+        <p class="page-hero__text">A few recent favourites from our counter. Tap any photo to see it larger.</p>
+      </div>
+    </section>
+
+    <!-- ================= MASONRY ================= -->
+    <section class="section gallery" aria-label="Photo gallery">
+      <div class="container">
+        <!-- TODO: swap Unsplash photos for the client's real photos.
+             data-full is the large version shown in the lightbox. -->
+        <ul class="gallery__grid" data-gallery>
+
+          <li class="gallery__item reveal">
+  <button class="gallery__btn" type="button" data-full="assets/images/images.jpg" aria-label="Open photo: Belgian Dark Truffle">
+    <img src="/assets/images/images.jpg" alt="Belgian Dark Truffle cake with glossy ganache" width="800" height="1000" loading="lazy">
+    <span class="gallery__cap glass">Belgian Dark Truffle</span>
+  </button>
+</li>
+
+          <li class="gallery__item reveal">
+            <button class="gallery__btn" type="button" data-full="/assets/images/cute-panda-chocolate-cake-1-kg_1.webp" aria-label="Open photo: Velvet cupcake box">
+              <img src="/assets/images/cute-panda-chocolate-cake-1-kg_1.webp" alt="Box of frosted cupcakes" width="800" height="800" loading="lazy">
+              <span class="gallery__cap glass">Velvet cupcake box</span>
+            </button>
+          </li>
+
+          <li class="gallery__item reveal">
+            <button class="gallery__btn" type="button" data-full="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1600&q=80" aria-label="Open photo: Rose Pistachio">
+              <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=800&h=1100&q=75" alt="Rose Pistachio cake topped with petals" width="800" height="1100" loading="lazy">
+              <span class="gallery__cap glass">Rose Pistachio</span>
+            </button>
+          </li>
+
+          <li class="gallery__item reveal">
+            <button class="gallery__btn" type="button" data-full="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=1600&q=80" aria-label="Open photo: Macarons and pastries">
+              <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&h=600&q=75" alt="Macarons and pastries on a tray" width="800" height="600" loading="lazy">
+              <span class="gallery__cap glass">Macarons and pastries</span>
+            </button>
+          </li>
+
+          <li class="gallery__item reveal">
+            <button class="gallery__btn" type="button" data-full="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=1600&q=80" aria-label="Open photo: Celebration cake">
+              <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=800&h=1000&q=75" alt="Decorated celebration cake" width="800" height="1000" loading="lazy">
+              <span class="gallery__cap glass">Celebration cake</span>
+            </button>
+          </li>
+
+          <li class="gallery__item reveal">
+            <button class="gallery__btn" type="button" data-full="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1600&q=80" aria-label="Open photo: Red velvet slice">
+              <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&h=800&q=75" alt="Slice of layered red velvet cake" width="800" height="800" loading="lazy">
+              <span class="gallery__cap glass">Red velvet slice</span>
+            </button>
+          </li>
+
+          <li class="gallery__item reveal">
+            <button class="gallery__btn" type="button" data-full="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=1600&q=80" aria-label="Open photo: Alphonso mango cream">
+              <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=800&h=1000&q=75" alt="Eggless mango cream cake" width="800" height="1000" loading="lazy">
+              <span class="gallery__cap glass">Alphonso mango cream</span>
+            </button>
+          </li>
+
+          <li class="gallery__item reveal">
+            <button class="gallery__btn" type="button" data-full="https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=1600&q=80" aria-label="Open photo: Salted caramel cupcakes">
+              <img src="https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=800&h=600&q=75" alt="Cupcakes with swirled caramel frosting" width="800" height="600" loading="lazy">
+              <span class="gallery__cap glass">Salted caramel cupcakes</span>
+            </button>
+          </li>
+
+          <li class="gallery__item reveal">
+            <button class="gallery__btn" type="button" data-full="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=1600&q=80" aria-label="Open photo: Strawberry cream tart">
+              <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&h=1100&q=75" alt="Strawberry cream tart" width="800" height="1100" loading="lazy">
+              <span class="gallery__cap glass">Strawberry cream tart</span>
+            </button>
+          </li>
+
+          <li class="gallery__item reveal">
+            <button class="gallery__btn" type="button" data-full="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1600&q=80" aria-label="Open photo: Piping the finishing touches">
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&h=800&q=75" alt="A baker piping icing onto a cake" width="800" height="800" loading="lazy">
+              <span class="gallery__cap glass">The finishing touches</span>
+            </button>
+          </li>
+
+          <li class="gallery__item reveal">
+            <button class="gallery__btn" type="button" data-full="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=1600&q=80" aria-label="Open photo: Chocolate dessert with berries">
+              <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=800&h=1000&q=75" alt="Chocolate dessert with fresh berries" width="800" height="1000" loading="lazy">
+              <span class="gallery__cap glass">Chocolate and berries</span>
+            </button>
+          </li>
+
+          <li class="gallery__item reveal">
+            <button class="gallery__btn" type="button" data-full="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=1600&q=80" aria-label="Open photo: Layer cake">
+              <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=800&h=600&q=75" alt="Layer cake with cream frosting" width="800" height="600" loading="lazy">
+              <span class="gallery__cap glass">Layer cake</span>
+            </button>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= LIGHTBOX ================= -->
+  <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+    <button class="lightbox__btn lightbox__close glass" type="button" data-lb-close aria-label="Close viewer">
+      <svg class="icon"><use href="#i-close"/></svg>
+    </button>
+    <button class="lightbox__btn lightbox__prev glass" type="button" data-lb-prev aria-label="Previous photo">
+      <svg class="icon"><use href="#i-left"/></svg>
+    </button>
+    <button class="lightbox__btn lightbox__next glass" type="button" data-lb-next aria-label="Next photo">
+      <svg class="icon"><use href="#i-right"/></svg>
+    </button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" data-lb-img src="" alt="">
+      <figcaption class="lightbox__caption"><span data-lb-caption></span> <span class="lightbox__count" data-lb-count></span></figcaption>
+    </figure>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">The Cake Boutique</p>
+          <p>Baked with love in Paldi, Ahmedabad.</p>
+          <address>
+            Bus Stand, 106, Giri Bhavan, Nr. Ajay Restaurant,<br>
+            Anand Nagar Road, Bhatta, Paldi,<br>
+            Ahmedabad, Gujarat 380007
+          </address>
+        </div>
+        <div>
+          <h2 class="footer__title">Explore</h2>
+          <ul class="footer__list">
+            <li><a class="link-underline" href="index.html">Home</a></li>
+            <li><a class="link-underline" href="menu.html">Menu</a></li>
+            <li><a class="link-underline" href="custom-cakes.html">Custom Cakes</a></li>
+            <li><a class="link-underline" href="gallery.html">Gallery</a></li>
+            <li><a class="link-underline" href="index.html#about">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__title">Say hello</h2>
+          <ul class="footer__list">
+            <li><a class="link-underline" href="tel:+910000000000">+91 00000 00000</a></li>
+            <li><a class="link-underline" href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp us</a></li>
+            <li><a class="link-underline" href="contact.html">Find the shop</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__bottom">© <span data-year>2026</span> The Cake Boutique. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-fab glass" href="https://wa.me/910000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg class="icon"><use href="#i-chat"/></svg>
+  </a>
+</body>
+</html>
