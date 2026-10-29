@@ -1536,4 +1536,62 @@
     tick();
     setInterval(tick, 1000);
   }
+    /* =========================================================
+     18 NAVBAR: gliding pill, progress line, order button
+     ========================================================= */
+  const navBar = $(".header__bar");
+  if (navBar) {
+    /* ---- 18a progress line ---- */
+    const progress = document.createElement("span");
+    progress.className = "header__progress";
+    progress.setAttribute("aria-hidden", "true");
+    navBar.append(progress);
+
+    let navTick = false;
+    const paintProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.setProperty("--sp", max > 0 ? Math.min(window.scrollY / max, 1).toFixed(3) : 0);
+      navTick = false;
+    };
+    window.addEventListener("scroll", () => {
+      if (!navTick) { requestAnimationFrame(paintProgress); navTick = true; }
+    }, { passive: true });
+    paintProgress();
+
+  
+    /* ---- 18c gliding pill ---- */
+    const navList = $(".nav__list", navBar);
+    if (navList) {
+      const links = $$(".nav__link", navList);
+      const glide = document.createElement("span");
+      glide.className = "nav__glide";
+      glide.setAttribute("aria-hidden", "true");
+      navList.prepend(glide);
+
+      const current = links.find((l) => l.getAttribute("aria-current") === "page");
+      const moveTo = (link, isCurrent, instant = false) => {
+        if (!link) { glide.style.opacity = "0"; return; }
+        glide.classList.toggle("is-instant", instant);
+        glide.classList.toggle("is-current", isCurrent);
+        glide.style.width = `${link.offsetWidth}px`;
+        glide.style.transform = `translateX(${link.offsetLeft}px)`;
+        glide.style.opacity = "1";
+      };
+      const home = (instant) => moveTo(current, true, instant);
+
+      links.forEach((link) => {
+        const enter = () => moveTo(link, link === current);
+        link.addEventListener("pointerenter", enter);
+        link.addEventListener("focus", enter);
+        link.addEventListener("blur", () => home(false));
+      });
+      navList.addEventListener("pointerleave", () => home(false));
+
+      // the nav is hidden below 1024px, so measure again once it shows
+      const place = () => { if (navList.offsetWidth) home(true); };
+      place();
+      document.fonts?.ready.then(place);
+      window.addEventListener("resize", place);
+    }
+  }
 })();
