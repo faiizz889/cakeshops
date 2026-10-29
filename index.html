@@ -6,6 +6,9 @@
   <title>The Cake Boutique | Baked with Love, Paldi, Ahmedabad</title>
   <meta name="description" content="Custom cakes, pastries and cupcakes baked fresh every day in Paldi, Ahmedabad. Order on WhatsApp.">
   <meta name="theme-color" content="#2a2a2a">
+  <script>
+  try { var t = localStorage.getItem("tcb-theme"); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="The Cake Boutique | Baked with Love">
@@ -114,6 +117,7 @@
           </div>
         </div>
         <aside class="hero__note glass" aria-label="Today at TCB">
+          <p class="status" data-open-status></p>
           <strong>Baked fresh daily.</strong><br>
           Order before 4 pm for same-day delivery across Ahmedabad.
         </aside>
@@ -226,6 +230,148 @@
         </div>
       </div>
     </section>
+    <!-- ================= SCROLL STORY ================= -->
+<section class="story" data-story aria-labelledby="story-title">
+  <div class="story__sticky">
+    <div class="container story__grid">
+      <div class="story__visual" aria-hidden="true">
+        <svg class="story__cake" viewBox="0 0 240 260">
+          <ellipse cx="120" cy="240" rx="104" ry="10" fill="rgba(0,0,0,0.35)"/>
+          <g class="story__layer" data-layer="0">
+            <rect x="40" y="170" width="160" height="62" rx="14" fill="#5a3a2a"/>
+            <rect x="52" y="112" width="136" height="62" rx="14" fill="#6b4632"/>
+          </g>
+          <g class="story__layer" data-layer="1">
+            <rect x="36" y="160" width="168" height="14" rx="7" fill="#f6efe6"/>
+            <rect x="48" y="104" width="144" height="12" rx="6" fill="#f6efe6"/>
+          </g>
+          <g class="story__layer" data-layer="2" fill="#2a1a12">
+            <rect x="48" y="84" width="144" height="26" rx="13"/>
+            <rect x="62" y="100" width="14" height="30" rx="7"/>
+            <rect x="110" y="100" width="14" height="22" rx="7"/>
+            <rect x="158" y="100" width="14" height="34" rx="7"/>
+          </g>
+          <g class="story__layer" data-layer="3">
+            <circle cx="92" cy="76" r="9" fill="#a3262e"/>
+            <circle cx="132" cy="72" r="9" fill="#a3262e"/>
+            <circle cx="164" cy="78" r="8" fill="#c9a27a"/>
+            <rect x="118" y="36" width="4" height="26" rx="2" fill="#c9a27a"/>
+            <ellipse class="cake__flame" cx="120" cy="29" rx="5" ry="8"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="story__copy">
+        <span class="eyebrow">From oven to table</span>
+        <h2 id="story-title">Every cake is built in four layers.</h2>
+        <ol class="story__steps">
+          <li class="story__step is-active" data-step>
+            <span class="story__num">01</span>
+            <h3>Baked at dawn</h3>
+            <p>Sponges come out of the oven the morning you collect. Never the day before.</p>
+          </li>
+          <li class="story__step" data-step>
+            <span class="story__num">02</span>
+            <h3>Layered with cream</h3>
+            <p>Fresh cream and real fruit, spread by hand so every slice is even.</p>
+          </li>
+          <li class="story__step" data-step>
+            <span class="story__num">03</span>
+            <h3>Glazed in ganache</h3>
+            <p>Belgian chocolate, melted slowly and poured while it's still warm.</p>
+          </li>
+          <li class="story__step" data-step>
+            <span class="story__num">04</span>
+            <h3>Finished by hand</h3>
+            <p>Your message, your colours, one last check, and it's boxed for you.</p>
+          </li>
+        </ol>
+        <div class="story__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NUMBERS ================= -->
+<section class="stats" aria-label="TCB in numbers">
+  <div class="container">
+    <!-- TODO: replace with the shop's real numbers -->
+    <ul class="stats__grid" data-stagger>
+      <li class="reveal"><strong data-count-to="5000" data-suffix="+">0</strong><span>Cakes baked</span></li>
+      <li class="reveal"><strong data-count-to="48">0</strong><span>Flavours and fillings</span></li>
+      <li class="reveal"><strong data-count-to="4" data-suffix="pm">0</strong><span>Same-day order cut-off</span></li>
+      <li class="reveal"><strong data-count-to="100" data-suffix="%">0</strong><span>Baked fresh daily</span></li>
+    </ul>
+  </div>
+</section>
+<!-- ================= CAKE OF THE MONTH (auto-rotating) ================= -->
+<section class="section spotlight" data-spotlight data-cake="Rose Pistachio" aria-labelledby="spot-title">
+  <div class="blobs" aria-hidden="true"><span></span><span></span></div>
+  <div class="container spotlight__grid">
+
+    <figure class="spotlight__media reveal">
+      <img data-sp-img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=75"
+           alt="Rose Pistachio cake topped with dried petals" width="900" height="1125" loading="lazy">
+
+      <svg class="spotlight__badge" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="sp-ring" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+        <circle cx="100" cy="100" r="98" fill="#c9a27a"/>
+        <g class="spotlight__ring">
+          <text fill="#2a2a2a" font-size="14" font-family="DM Sans, sans-serif" letter-spacing="3">
+            <textPath href="#sp-ring" textLength="495" lengthAdjust="spacing">CAKE OF THE MONTH · BAKED WITH LOVE · </textPath>
+          </text>
+        </g>
+        <circle cx="100" cy="100" r="50" fill="none" stroke="#2a2a2a" stroke-opacity=".5"/>
+        <text x="100" y="110" text-anchor="middle" fill="#2a2a2a" font-size="30" font-family="Fraunces, serif">TCB</text>
+      </svg>
+
+      <div class="spotlight__timer glass" role="timer" aria-label="Time left this month">
+        <p>Ends in</p>
+        <div class="timer">
+          <div><b data-cd="d">00</b><small>Days</small></div>
+          <div><b data-cd="h">00</b><small>Hours</small></div>
+          <div><b data-cd="m">00</b><small>Mins</small></div>
+          <div><b data-cd="s">00</b><small>Secs</small></div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="spotlight__text reveal">
+      <span class="eyebrow">Cake of the month &middot; <span data-month>October</span></span>
+      <h2 id="spot-title" data-sp-name>Rose Pistachio</h2>
+      <p data-sp-desc>Rose-scented cream, a roasted pistachio crumb and dried petals on top. Light, floral and a little bit festive.</p>
+      <ul class="spotlight__notes" data-sp-notes>
+        <li>Rose cream</li>
+        <li>Roasted pistachio</li>
+        <li>Dried petals</li>
+      </ul>
+      <p class="spotlight__price">From <strong data-sp-price>₹1,100</strong> / <span data-sp-unit>0.5 kg</span></p>
+      <div class="spotlight__actions">
+        <a class="btn btn--solid" data-spotlight-order href="https://wa.me/910000000000" target="_blank" rel="noopener">
+          <svg class="icon"><use href="#i-chat"/></svg>Pre-order on WhatsApp</a>
+        <a class="btn glass" href="menu.html">See the full menu</a>
+      </div>
+      <p class="spotlight__fine">Please order 48 hours ahead. Changes every month.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DELIVERY CHECKER ================= -->
+<section class="section delivery" aria-labelledby="delivery-title">
+  <div class="container delivery__wrap">
+    <div class="reveal">
+      <span class="eyebrow">Delivery</span>
+      <h2 id="delivery-title">Do we deliver to you?</h2>
+      <p>Enter your 6-digit pincode and we'll tell you straight away.</p>
+    </div>
+    <form class="delivery__form reveal" data-delivery novalidate>
+      <label class="visually-hidden" for="pin">Pincode</label>
+      <input id="pin" type="text" inputmode="numeric" maxlength="6" placeholder="e.g. 380007" autocomplete="postal-code">
+      <button class="btn btn--dark" type="submit">Check</button>
+      <p class="delivery__result" data-delivery-result role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
     <!-- ================= CAKE STUDIO ================= -->
 <section class="section builder" data-builder aria-labelledby="builder-title">
   <div class="blobs" aria-hidden="true"><span></span><span></span></div>
@@ -330,24 +476,28 @@
       </div>
     </section>
 
-    <!-- ================= INSTAGRAM GRID ================= -->
-    <section class="section insta" aria-labelledby="insta-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">On the counter</span>
-          <h2 id="insta-title">Fresh from the kitchen.</h2>
-        </div>
-        <!-- TODO: replace with the shop's real Instagram photos -->
-        <ul class="insta__grid" data-stagger>
-          <li class="reveal"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=500&q=70" alt="Macarons and pastries" width="500" height="500" loading="lazy"></li>
-          <li class="reveal"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=70" alt="Slice of layered cake" width="500" height="500" loading="lazy"></li>
-          <li class="reveal"><img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=500&q=70" alt="Decorated birthday cake" width="500" height="500" loading="lazy"></li>
-          <li class="reveal"><img src="https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=500&q=70" alt="Cupcakes with swirled frosting" width="500" height="500" loading="lazy"></li>
-          <li class="reveal"><img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=500&q=70" alt="Strawberry tart" width="500" height="500" loading="lazy"></li>
-          <li class="reveal"><img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=500&q=70" alt="Chocolate dessert with berries" width="500" height="500" loading="lazy"></li>
-        </ul>
+   <!-- ================= INSTAGRAM REELS ================= -->
+<section class="section reels" aria-labelledby="reels-title">
+  <div class="container">
+    <div class="reels__head reveal">
+      <div class="section-head">
+        <span class="eyebrow">On Instagram</span>
+        <h2 id="reels-title">Watch the cakes come to life.</h2>
+        <p>Fresh reels from our kitchen. Tap one to play.</p>
       </div>
-    </section>
+      <div class="reels__actions">
+        <!-- TODO: replace thecakeboutique with the real Instagram username -->
+        <a class="btn btn--dark" data-ig-profile href="https://www.instagram.com/thecakeboutique/" target="_blank" rel="noopener">Follow us</a>
+        <button class="round-btn" type="button" data-reels-prev aria-label="Previous reels"><svg class="icon"><use href="#i-left"/></svg></button>
+        <button class="round-btn" type="button" data-reels-next aria-label="Next reels"><svg class="icon"><use href="#i-right"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <ul class="reels__rail" data-reels aria-label="Instagram reels"></ul>
+    <noscript><p>Watch our reels on <a href="https://www.instagram.com/thecakeboutique/">Instagram</a>.</p></noscript>
+  </div>
+</section>
 
     
     <div class="marquee" aria-hidden="true">

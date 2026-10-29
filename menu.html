@@ -6,6 +6,9 @@
   <title>Menu | The Cake Boutique, Paldi, Ahmedabad</title>
   <meta name="description" content="Birthday, wedding and anniversary cakes, cupcakes and pastries from The Cake Boutique. Pick a size, see the price, enquire on WhatsApp.">
   <meta name="theme-color" content="#2a2a2a">
+  <script>
+  try { var t = localStorage.getItem("tcb-theme"); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Menu | The Cake Boutique">
@@ -91,23 +94,51 @@
         <span class="eyebrow page-hero__eyebrow">The menu</span>
         <h1 class="page-hero__title" id="menu-title">Pick a favourite. Pick a size.</h1>
         <p class="page-hero__text">Every cake is baked the morning you collect it. Prices update as you choose a size.</p>
-
-        <div class="chips" role="group" aria-label="Filter the menu">
-          <button class="chip glass" type="button" data-filter="all" aria-pressed="true">All</button>
-          <button class="chip glass" type="button" data-filter="birthday" aria-pressed="false">Birthday</button>
-          <button class="chip glass" type="button" data-filter="wedding" aria-pressed="false">Wedding</button>
-          <button class="chip glass" type="button" data-filter="anniversary" aria-pressed="false">Anniversary</button>
-          <button class="chip glass" type="button" data-filter="cupcakes" aria-pressed="false">Cupcakes</button>
-          <button class="chip glass" type="button" data-filter="pastries" aria-pressed="false">Pastries</button>
-          <button class="chip glass" type="button" data-filter="eggless" aria-pressed="false">Eggless</button>
-        </div>
       </div>
     </section>
 
     <!-- ================= PRODUCTS ================= -->
-    <section class="section menu" aria-label="Cakes and sweets">
-      <div class="container">
-        <p class="menu__meta" aria-live="polite"><span data-count>10</span> items &middot; baked fresh daily</p>
+   <section class="section menu" aria-label="Cakes and sweets">
+  <div class="container">
+
+    <div class="toolbar" data-toolbar>
+      <div class="tabs" role="group" aria-label="Filter the menu" data-tabs>
+        <span class="tabs__glide" aria-hidden="true"></span>
+        <button class="tab" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="tab" type="button" data-filter="birthday" aria-pressed="false">Birthday</button>
+        <button class="tab" type="button" data-filter="wedding" aria-pressed="false">Wedding</button>
+        <button class="tab" type="button" data-filter="anniversary" aria-pressed="false">Anniversary</button>
+        <button class="tab" type="button" data-filter="cupcakes" aria-pressed="false">Cupcakes</button>
+        <button class="tab" type="button" data-filter="pastries" aria-pressed="false">Pastries</button>
+        <button class="tab" type="button" data-filter="eggless" aria-pressed="false">Eggless</button>
+      </div>
+
+      <div class="tools">
+        <label class="search">
+          <span class="visually-hidden">Search the menu</span>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+          <input type="search" placeholder="Search the menu" autocomplete="off" aria-keyshortcuts="/" data-search>
+        </label>
+        <div class="view" role="group" aria-label="Choose layout">
+          <button class="view__btn" type="button" data-view="grid" aria-pressed="true" aria-label="Grid view">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg>
+          </button>
+          <button class="view__btn" type="button" data-view="list" aria-pressed="false" aria-label="Menu card view">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu__bar">
+      <p class="menu__meta" aria-live="polite"><span data-count>10</span> items &middot; baked fresh daily &middot; <span class="veg"></span>eggless</p>
+      <button class="surprise" type="button" data-surprise>
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="9" cy="9" r="1" fill="currentColor"/><circle cx="15" cy="9" r="1" fill="currentColor"/><circle cx="9" cy="15" r="1" fill="currentColor"/><circle cx="15" cy="15" r="1" fill="currentColor"/></svg>
+        Surprise me
+      </button>
+    </div>
+
+    <!-- keep your existing <ul class="menu__grid" data-menu-grid> ... </ul> exactly as it is -->
 
         <!-- Size buttons are built by main.js from data-units and data-prices -->
         <!-- TODO: swap Unsplash photos for the client's real cake photos and prices -->
@@ -274,6 +305,16 @@
           </li>
 
         </ul>
+            <div class="menu__empty" data-empty hidden>
+      <p class="menu__empty-title">Nothing like that on the counter today.</p>
+      <p>Try another word, or tell us what you have in mind and we'll bake it custom.</p>
+      <div class="menu__empty-actions">
+        <button class="btn btn--dark" type="button" data-clear>Clear search</button>
+        <a class="link-underline" href="custom-cakes.html">Design a custom cake</a>
+      </div>
+    </div>
+  </div>
+</section>
       </div>
     </section>
   </main>
